@@ -276,6 +276,22 @@
         .contact-form textarea { height: 130px; resize: none; }
         .submit-btn { background: var(--gradient-accent); color: #FFFFFF; padding: 15px; border: none; font-weight: 700; text-transform: uppercase; font-size: 13px; cursor: pointer; width: 100%; letter-spacing: 0.5px; }
 
+        /* Faaliyet Şeridi */
+        .faaliyet-strip { background: var(--ana-lacivert); padding: 60px 20px; }
+        .faaliyet-strip .section-title { color: #FFFFFF; }
+        .faaliyet-strip .section-title::after { background: linear-gradient(90deg, var(--acik-mavi), #8da9c4); }
+        .faaliyet-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 40px; }
+        .faaliyet-tag { background: rgba(255,255,255,0.06); border: 1px solid rgba(141,169,196,0.35); color: #cbd5e1; padding: 12px 22px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.2s; }
+        .faaliyet-tag:hover { background: rgba(141,169,196,0.18); color: #FFFFFF; border-color: var(--acik-mavi); }
+
+        /* Uzmanlıklar */
+        .uzmanlik-section { margin-top: 70px; }
+        .uzmanlik-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; margin-top: 40px; }
+        .uzmanlik-item { display: flex; align-items: flex-start; gap: 14px; background: var(--soft-gri); border: 1px solid var(--border-gri); padding: 22px; border-left: 4px solid var(--acik-mavi); }
+        body:not(.dark-theme) .uzmanlik-item { border-left-color: var(--yardimci-mavi); }
+        .uzmanlik-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+        .uzmanlik-item h5 { font-size: 14px; font-weight: 700; color: var(--text-main); line-height: 1.5; }
+
         /* Alt Ekonomi Şeridi */
         .ticker-wrap { position: fixed; bottom: 0; width: 100%; overflow: hidden; height: 40px; background-color: var(--ticker-bg); border-top: 2px solid var(--acik-mavi); z-index: 9999; display: flex; align-items: center; }
         .ticker-title { background: rgba(255,255,255,0.05); color: #FFFFFF; padding: 0 20px; height: 100%; display: flex; align-items: center; font-weight: 800; font-size: 11px; border-right: 2px solid var(--border-gri); }
@@ -325,6 +341,21 @@
             <p id="hero-desc" data-tr="Uluslararası standartlarda, kıtalararası operasyon kabiliyetiyle küresel altyapı, derin temel iksa ve ileri teknoloji çelik palplanş mühendisliğinde dünyanın güvenilir çözüm ortağıyız." data-en="We are the world's trusted solution partner in global infrastructure, deep foundation shoring, and high-tech steel sheet piling engineering with international standards and intercontinental operational capability.">Uluslararası standartlarda, kıtalararası operasyon kabiliyetiyle küresel altyapı, derin temel iksa ve ileri teknoloji çelik palplanş mühendisliğinde dünyanın güvenilir çözüm ortağıyız.</p>
             <button onclick="showPage('hakkimizda')" id="hero-btn" data-tr="Global Kurumsal Profili Keşfedin" data-en="Explore Global Corporate Profile">Global Kurumsal Profili Keşfedin</button>
         </section>
+
+        <section class="faaliyet-strip">
+            <div class="container">
+                <h2 class="section-title" data-tr="Faaliyetlerimiz" data-en="Our Activities">Faaliyetlerimiz</h2>
+                <p class="section-subtitle" style="color:#94a3b8;" data-tr="Zemin mühendisliğinin her alanında kapsamlı saha deneyimi ve teknik yetkinlikle hizmet sunuyoruz." data-en="We provide services in all areas of geotechnical engineering with extensive field experience and technical competence.">Zemin mühendisliğinin her alanında kapsamlı saha deneyimi ve teknik yetkinlikle hizmet sunuyoruz.</p>
+                <div class="faaliyet-tags">
+                    <span class="faaliyet-tag" data-tr="Palplanş" data-en="Sheet Piling">Palplanş</span>
+                    <span class="faaliyet-tag" data-tr="Şehir İçi Dar Alan Kazıları" data-en="Urban Narrow Area Excavations">Şehir İçi Dar Alan Kazıları</span>
+                    <span class="faaliyet-tag" data-tr="Boru Hattı Dere Geçişleri" data-en="Pipeline Stream Crossings">Boru Hattı Dere Geçişleri</span>
+                    <span class="faaliyet-tag" data-tr="Köprü Ayakları Temelleri" data-en="Bridge Pier Foundations">Köprü Ayakları Temelleri</span>
+                    <span class="faaliyet-tag" data-tr="Altyapı & Kanalizasyon Projeleri" data-en="Infrastructure & Sewerage Projects">Altyapı & Kanalizasyon Projeleri</span>
+                    <span class="faaliyet-tag" data-tr="Zemin İyileştirme Çalışmaları" data-en="Ground Improvement Works">Zemin İyileştirme Çalışmaları</span>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- 2. SAYFA: HAKKIMIZDA -->
@@ -372,43 +403,83 @@
                     <div class="service-card">
                         <div class="service-img-wrapper"><div class="service-img" style="background-image: url('images/foto2.jpeg');"></div></div>
                         <div class="service-info">
-                            <h4 data-tr="Çelik Palplanş İmalat & Söküm" data-en="Steel Sheet Piling Driving & Extraction">Çelik Palplanş İmalat & Söküm</h4>
-                            <p data-tr="U ve Z tipi yüksek mukavemetli çelik profillerin yüksek frekanslı vibratörler kullanılarak hassasiyetle çakılması." data-en="Precision driving of U and Z type high-strength steel profiles using high-frequency vibrators.">U ve Z tipi yüksek mukavemetli çelik profillerin yüksek frekanslı vibratörler kullanılarak hassasiyetle çakılması.</p>
+                            <h4 data-tr="Altyapı Projeleri" data-en="Infrastructure Projects">Altyapı Projeleri</h4>
+                            <p data-tr="Köprü, yol ve demiryolu zemin güçlendirme çözümleri." data-en="Bridge, road and railway ground reinforcement solutions.">Köprü, yol ve demiryolu zemin güçlendirme çözümleri.</p>
                         </div>
                     </div>
                     <div class="service-card">
                         <div class="service-img-wrapper"><div class="service-img" style="background-image: url('images/foto3.jpeg');"></div></div>
                         <div class="service-info">
-                            <h4 data-tr="Sessiz & Sarsıntısız Hidrolik Baskılama" data-en="Silent Hydraulic Piling">Sessiz & Sarsıntısız Hidrolik Baskılama</h4>
-                            <p data-tr="Kentsel alanlarda gürültü ve vibrasyon oluşturmadan, saf hidrolik güçle çelik palplanş presleme uygulamaları." data-en="Steel sheet piling pressing applications with pure hydraulic power without generating noise and vibration in urban areas.">Kentsel alanlarda gürültü ve vibrasyon oluşturmadan, saf hidrolik güçle çelik palplanş presleme uygulamaları.</p>
+                            <h4 data-tr="Liman ve Kıyı Yapıları" data-en="Port & Coastal Structures">Liman ve Kıyı Yapıları</h4>
+                            <p data-tr="Dalgakıran, rıhtım ve iskele projelerinde güvenilir destek." data-en="Reliable support in breakwater, quay and jetty projects.">Dalgakıran, rıhtım ve iskele projelerinde güvenilir destek.</p>
                         </div>
                     </div>
                     <div class="service-card">
                         <div class="service-img-wrapper"><div class="service-img" style="background-image: url('images/foto4.jpeg');"></div></div>
                         <div class="service-info">
-                            <h4 data-tr="Derin Kazı & Zemin Stabilizasyonu" data-en="Deep Excavation & Ground Stabilization">Derin Kazı & Zemin Stabilizasyonu</h4>
-                            <p data-tr="Zemin etüdüne dayalı mühendislik hesaplarıyla kritik kazı güvenliğinin sağlanması ve zemin iyileştirme çalışmaları." data-en="Ensuring critical excavation safety and ground improvement works based on geotechnical engineering calculations.">Zemin etüdüne dayalı mühendislik hesaplarıyla kritik kazı güvenliğinin sağlanması ve zemin iyileştirme çalışmaları.</p>
+                            <h4 data-tr="Çevre Koruma Projeleri" data-en="Environmental Protection Projects">Çevre Koruma Projeleri</h4>
+                            <p data-tr="Taşkın önleme ve zemin stabilizasyonu uygulamaları." data-en="Flood prevention and ground stabilization applications.">Taşkın önleme ve zemin stabilizasyonu uygulamaları.</p>
                         </div>
                     </div>
                     <div class="service-card">
                         <div class="service-img-wrapper"><div class="service-img" style="background-image: url('images/foto5.jpeg');"></div></div>
                         <div class="service-info">
-                            <h4 data-tr="Deniz Yapıları & Kıyı İksası" data-en="Marine Structures & Coastal Shoring">Deniz Yapıları & Kıyı İksası</h4>
-                            <p data-tr="Liman, rıhtım ve kıyı yapılarında su altı ve su üstü çelik palplanş iksa sistemleri." data-en="Underwater and overwater steel sheet piling shoring systems for ports, quays and coastal structures.">Liman, rıhtım ve kıyı yapılarında su altı ve su üstü çelik palplanş iksa sistemleri.</p>
+                            <h4 data-tr="Endüstriyel Yapılar" data-en="Industrial Structures">Endüstriyel Yapılar</h4>
+                            <p data-tr="Fabrika ve depolama tesislerinde dayanıklı temel sistemleri." data-en="Durable foundation systems for factories and storage facilities.">Fabrika ve depolama tesislerinde dayanıklı temel sistemleri.</p>
                         </div>
                     </div>
                     <div class="service-card">
                         <div class="service-img-wrapper"><div class="service-img" style="background-image: url('images/foto6.jpeg');"></div></div>
                         <div class="service-info">
-                            <h4 data-tr="Zemin Etüdü & Mühendislik Danışmanlığı" data-en="Geotechnical Survey & Engineering Consultancy">Zemin Etüdü & Mühendislik Danışmanlığı</h4>
-                            <p data-tr="Projeye özel saha sondajı, zemin sınıflandırması ve optimum iksa sistemi seçiminde uçtan uca mühendislik desteği." data-en="End-to-end engineering support in project-specific site drilling, soil classification and optimal shoring system selection.">Projeye özel saha sondajı, zemin sınıflandırması ve optimum iksa sistemi seçiminde uçtan uca mühendislik desteği.</p>
+                            <h4 data-tr="Çelik Palplanş Mühendisliği" data-en="Steel Sheet Piling Engineering">Çelik Palplanş Mühendisliği</h4>
+                            <p data-tr="U ve Z tipi yüksek mukavemetli çelik profillerin hassas çakım, söküm ve yeniden kullanım uygulamaları." data-en="Precision driving, extraction and re-use applications of U and Z type high-strength steel profiles.">U ve Z tipi yüksek mukavemetli çelik profillerin hassas çakım, söküm ve yeniden kullanım uygulamaları.</p>
                         </div>
                     </div>
                     <div class="service-card">
                         <div class="service-img-wrapper"><div class="service-img" style="background-image: url('images/foto1.jpeg');"></div></div>
                         <div class="service-info">
-                            <h4 data-tr="Anahtar Teslim Proje Yönetimi" data-en="Turnkey Project Management">Anahtar Teslim Proje Yönetimi</h4>
-                            <p data-tr="Proje tasarımından saha uygulamasına, metraj ve keşiften hakediş yönetimine kadar tam entegre proje teslimi." data-en="Fully integrated project delivery from design to site application, from quantity surveying to progress payment management.">Proje tasarımından saha uygulamasına, metraj ve keşiften hakediş yönetimine kadar tam entegre proje teslimi.</p>
+                            <h4 data-tr="Zemin İyileştirme & Stabilizasyon" data-en="Ground Improvement & Stabilization">Zemin İyileştirme & Stabilizasyon</h4>
+                            <p data-tr="Zayıf ve taşıma gücü düşük zeminlerde mühendislik yöntemleriyle kalıcı iyileştirme ve güçlendirme çalışmaları." data-en="Permanent improvement and reinforcement works with engineering methods on weak and low-bearing capacity grounds.">Zayıf ve taşıma gücü düşük zeminlerde mühendislik yöntemleriyle kalıcı iyileştirme ve güçlendirme çalışmaları.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UZMANLIKLAR -->
+                <div class="uzmanlik-section">
+                    <h2 class="section-title" data-tr="Uzmanlıklarımız" data-en="Our Specializations">Uzmanlıklarımız</h2>
+                    <p class="section-subtitle" data-tr="Sahaya özel teknik bilgi birikimimizle her projede en doğru çözümü sunuyoruz." data-en="We provide the right solution for every project with our field-specific technical expertise.">Sahaya özel teknik bilgi birikimimizle her projede en doğru çözümü sunuyoruz.</p>
+                    <div class="uzmanlik-grid">
+                        <div class="uzmanlik-item">
+                            <span class="uzmanlik-icon">🏗️</span>
+                            <h5 data-tr="Altyapı Kanalizasyon Projeleri" data-en="Infrastructure Sewerage Projects">Altyapı Kanalizasyon Projeleri</h5>
+                        </div>
+                        <div class="uzmanlik-item">
+                            <span class="uzmanlik-icon">💧</span>
+                            <h5 data-tr="Deşarj Hatları" data-en="Discharge Lines">Deşarj Hatları</h5>
+                        </div>
+                        <div class="uzmanlik-item">
+                            <span class="uzmanlik-icon">⚙️</span>
+                            <h5 data-tr="Keson Kuyu İmalatları" data-en="Caisson Well Construction">Keson Kuyu İmalatları</h5>
+                        </div>
+                        <div class="uzmanlik-item">
+                            <span class="uzmanlik-icon">🌉</span>
+                            <h5 data-tr="Köprü Ayakları Temelleri" data-en="Bridge Pier Foundations">Köprü Ayakları Temelleri</h5>
+                        </div>
+                        <div class="uzmanlik-item">
+                            <span class="uzmanlik-icon">🔧</span>
+                            <h5 data-tr="Boru Hattı Dere Geçişleri" data-en="Pipeline Stream Crossings">Boru Hattı Dere Geçişleri</h5>
+                        </div>
+                        <div class="uzmanlik-item">
+                            <span class="uzmanlik-icon">🏙️</span>
+                            <h5 data-tr="Şehir İçi Dar Alan Kazıları" data-en="Urban Narrow Area Excavations">Şehir İçi Dar Alan Kazıları</h5>
+                        </div>
+                        <div class="uzmanlik-item">
+                            <span class="uzmanlik-icon">⚓</span>
+                            <h5 data-tr="İskele & Rıhtım İşleri" data-en="Jetty & Quay Works">İskele & Rıhtım İşleri</h5>
+                        </div>
+                        <div class="uzmanlik-item">
+                            <span class="uzmanlik-icon">🪨</span>
+                            <h5 data-tr="Taş Tahkimat — Deniz, Baraj & Dere Yatakları" data-en="Stone Revetment — Sea, Dam & Riverbeds">Taş Tahkimat — Deniz, Baraj & Dere Yatakları</h5>
                         </div>
                     </div>
                 </div>
