@@ -86,8 +86,8 @@
         }
 
         .logo img {
-            height: 44px;
-            width: 44px;
+            height: 56px;
+            width: 56px;
             object-fit: cover;
             border-radius: 50%;
         }
@@ -105,35 +105,30 @@
         nav button {
             background: none;
             border: none;
-            color: #cbd5e1;
-            font-size: 13px;
+            color: #94a3b8;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
-            margin-left: 18px;
+            margin-left: 4px;
             cursor: pointer;
-            padding: 8px 0;
+            padding: 8px 13px;
             position: relative;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.6px;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
         }
 
-        nav button::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--acik-mavi);
-            transition: width 0.3s ease;
-        }
-
-        nav button:hover::after, nav button.active::after {
-            width: 100%;
-        }
-
-        nav button:hover, nav button.active {
+        nav button:hover {
+            background: rgba(56, 189, 248, 0.12);
             color: #FFFFFF;
         }
+
+        nav button.active {
+            background: var(--acik-mavi);
+            color: #0B2545;
+        }
+
+        nav button::after { display: none; }
 
         /* Kontroller (Dil ve Tema Seçici) */
         .controls {
@@ -578,7 +573,6 @@
     <!-- 1. SAYFA: ANASAYFA -->
     <div id="page-anasayfa" class="page active-page">
         <section class="hero">
-            <h1 id="hero-title" data-tr="Global Foundation Engineering & Heavy Shoring Systems" data-en="Global Foundation Engineering & Heavy Shoring Systems">Global Foundation Engineering & Heavy Shoring Systems</h1>
             <p id="hero-desc" data-tr="Uluslararası standartlarda, kıtalararası operasyon kabiliyetiyle küresel altyapı, derin temel iksa ve ileri teknoloji çelik palplanş mühendisliğinde dünyanın güvenilir çözüm ortağıyız." data-en="We are the world's trusted solution partner in global infrastructure, deep foundation shoring, and high-tech steel sheet piling engineering with international standards and intercontinental operational capability.">Uluslararası standartlarda, kıtalararası operasyon kabiliyetiyle küresel altyapı, derin temel iksa ve ileri teknoloji çelik palplanş mühendisliğinde dünyanın güvenilir çözüm ortağıyız.</p>
             <button onclick="showPage('hakkimizda')" id="hero-btn" data-tr="Global Kurumsal Profili Keşfedin" data-en="Explore Global Corporate Profile">Global Kurumsal Profili Keşfedin</button>
         </section>
